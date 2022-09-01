@@ -19,15 +19,14 @@ export default new VueRouter({
       name: "main"
     },
     {
-      path: "/search/:searchValue",
+      path: "/search/:keyword",
       component: appSearch,
       name: "search"
     },
     {
-      path: "/detail",
+      path: "/detail/:movieName",
       component: appDetail,
       name: "detail",
-      props: true,
     },
   ]
 })
