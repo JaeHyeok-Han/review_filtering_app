@@ -8,18 +8,5 @@
 export default {};
 </script>
 
-<style scoped>
-.header-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.app-header {
-  font-size: 2rem;
-  margin: 20px auto;
-  background: linear-gradient(315deg, #d1bad2 0%, #a7becc 74%);
-  color: transparent;
-  background-clip: text;
-  font: bold 2rem "IBM Plex Sans KR", sans-serif;
-}
+<style>
 </style>

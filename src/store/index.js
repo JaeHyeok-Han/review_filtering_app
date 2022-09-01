@@ -6,8 +6,9 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    currentMovie: {},
     ranking: [],
+    searchKeyword: "",
+    currentMovie: {},
     searchList: [],
     review: [],
     emotion: {},
@@ -34,6 +35,9 @@ export default new Vuex.Store({
   mutations: {
     SET_RANKING(state, data) {
       state.ranking = data;
+    },
+    SET_SEARCHKEYWORD(state, data) {
+      state.searchKeyword = data;
     },
     SET_SEARTCH_LIST(state, data) {
       state.searchList = data;

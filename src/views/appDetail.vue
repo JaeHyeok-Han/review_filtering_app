@@ -52,21 +52,5 @@ export default {
 };
 </script>
 
-<style scoped>
-.menu-box {
-  width: 100%;
-  height: 50px;
-  display: flex;
-}
-.menu {
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(315deg, #d1bad2 0%, #a7becc 74%);
-  margin: 4px 5px;
-  border-radius: 10px;
-  color: white;
-  cursor: pointer;
-}
+<style>
 </style>

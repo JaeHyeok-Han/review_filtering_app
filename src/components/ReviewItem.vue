@@ -13,10 +13,4 @@ export default {
 </script>
 
 <style>
-.reviewItem {
-  width: 95%;
-  margin: 2px auto;
-  border-bottom: 1px solid rgb(202, 202, 202);
-  padding: 5px;
-}
 </style>

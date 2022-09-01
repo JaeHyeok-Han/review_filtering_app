@@ -3,14 +3,12 @@
 </template>
 
 <script>
-export default {};
+export default {
+  created() {
+    this.$store.dispatch("FETCH_RANKING");
+  },
+};
 </script>
 
 <style>
-a {
-  text-decoration: none;
-}
-body {
-  background: #eee;
-}
 </style>

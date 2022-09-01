@@ -3,7 +3,7 @@
     <app-header />
     <search-box />
     <p class="search-result-notice">
-      "{{ this.$route.params.searchValue }}" 검색결과 :
+      "{{ this.searchValue }}" 검색결과 :
       {{ searchItem.length }}건
     </p>
     <div class="searchItem-Box">
@@ -27,6 +27,15 @@ export default {
     SearchBox,
     SearchItem,
   },
+  data() {
+    return {
+      searchValue: this.$route.params.searchValue,
+    };
+  },
+  created() {
+    if(this.$store.getters.GET_SEARCH_LIST.length === 0)
+      this.$store.dispatch("FETCH_SEARCH_LIST", this.searchValue);
+  },
   computed: {
     searchItem() {
       return this.$store.getters.GET_SEARCH_LIST;
@@ -35,15 +44,5 @@ export default {
 };
 </script>
 
-<style scoped>
-.search-result-notice {
-  text-align: center;
-  padding: 0 0 10px;
-}
-.searchItem-Box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px;
-}
+<style>
 </style>

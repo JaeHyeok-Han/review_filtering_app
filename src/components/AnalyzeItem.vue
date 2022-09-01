@@ -32,35 +32,5 @@ export default {
 };
 </script>
 
-<style scoped>
-.emotionItemContainer {
-  width: 100%;
-  height: 80px;
-}
-.info {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  height: 40%;
-  padding: 0 20px;
-}
-.content {
-  display: flex;
-  width: 100%;
-  height: 60%;
-  padding: 0 5px;
-}
-.po {
-  height: 60%;
-  background-color: rgb(74 208 95);
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-}
-.na {
-  height: 60%;
-  background-color: rgb(255 70 70);
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
+<style>
 </style>

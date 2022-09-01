@@ -28,19 +28,9 @@ export default {
     rankingItem() {
       return this.$store.getters.GET_RANKING;
     },
-  },
-  created() {
-    this.$store.dispatch("FETCH_RANKING");
-  },
+  }
 };
 </script>
 
-<style scoped>
-.ranking-box {
-  width: 100%;
-  padding: 30px 0 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+<style>
 </style>

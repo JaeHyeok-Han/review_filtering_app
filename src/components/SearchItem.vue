@@ -96,20 +96,5 @@ export default {
 };
 </script>
 
-<style scoped>
-.searchItem-container {
-  width: 100%;
-  display: flex;
-  padding: 5px;
-  border-radius: 10px;
-}
-.poster-box {
-  width: 20%;
-}
-img {
-  width: 100%;
-}
-.info-box {
-  padding: 4px 0 0 10px;
-}
+<style>
 </style>

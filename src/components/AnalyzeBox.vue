@@ -23,8 +23,5 @@ export default {
 };
 </script>
 
-<style scoped>
-.analyzeContainer {
-  padding-top: 20px;
-}
+<style>
 </style>
