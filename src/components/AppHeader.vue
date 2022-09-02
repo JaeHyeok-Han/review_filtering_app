@@ -1,6 +1,6 @@
 <template>
-  <div class="header-container">
-    <router-link to="/main" class="app-header">Search your Movie</router-link>
+  <div class="headerContainer">
+    <router-link to="/main" class="header">MovieCom</router-link>
   </div>
 </template>
 

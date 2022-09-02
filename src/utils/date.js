@@ -3,5 +3,5 @@ export function makeDateString() {
   const H = date.getFullYear();
   const M = date.getMonth() + 1;
   const D = date.getDate();
-  return String(H) + (M < 10 ? `0${String(M)}` : String(M))  + String(D);
+  return String(H) + (M < 10 ? `0${String(M)}` : String(M)) + (D < 10 ? `0${String(D)}` : String(D));
 }

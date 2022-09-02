@@ -1,4 +1,5 @@
-import { getRanking, getItem } from '../api/index.js';
+import { getRanking } from '../api/kobisAPI.js';
+import { getMovieInfo } from '../api/kmdbAPI.js';
 
 export default {
   state: {
@@ -15,17 +16,12 @@ export default {
     },
   },
   actions: {
-    FETCH_RANKING({ commit }) {
-      getRanking()
-        .then(res => {
-          const items = [];
-          res.forEach((ele, index) => {
-            items[index] = getItem(ele.movieNm);
-          })
-          return Promise.all(items);
-        })
-        .then(res => commit("SET_RANKING", res))
-        .catch(err => console.log(err));
+    async FETCH_RANKING({ commit }) {
+      const items = [];
+      const rankResponse = await getRanking();
+      rankResponse.forEach(ele => items.push(getMovieInfo(ele.movieNm)));
+      const response = await Promise.all(items);
+      commit("SET_RANKING", response);
     },
   }
 }

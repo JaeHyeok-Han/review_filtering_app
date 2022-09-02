@@ -26,9 +26,6 @@ export default {
       return this.$store.getters.GET_REVIEW;
     },
   },
-  beforeDestroy() {
-    this.$store.commit("INIT");
-  },
 };
 </script>
 

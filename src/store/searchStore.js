@@ -1,4 +1,4 @@
-import { getSearchList } from '../api/index.js';
+import { getSearchList } from '../api/kmdbAPI.js';
 
 export default {
   state: {
@@ -6,12 +6,15 @@ export default {
     searchList: [],
   },
   getters: {
+    GET_SEARCH_KEYWORD(state) {
+      return state.searchKeyword;
+    },
     GET_SEARCH_LIST(state) {
       return state.searchList;
     },
   },
   mutations: {
-    SET_SEARCHKEYWORD(state, data) {
+    SET_SEARCH_KEYWORD(state, data) {
       state.searchKeyword = data;
     },
     SET_SEARTCH_LIST(state, data) {
@@ -20,6 +23,7 @@ export default {
   },
   actions: {
     FETCH_SEARCH_LIST({ commit }, title) {
+      commit("SET_SEARCH_KEYWORD", title);
       getSearchList(title)
         .then(res => commit("SET_SEARTCH_LIST", res))
         .catch(err => console.log(err));
