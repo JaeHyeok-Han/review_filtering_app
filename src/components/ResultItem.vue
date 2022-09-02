@@ -11,8 +11,8 @@ export default {
   },
   methods: {
     selectMovie() {
-      this.$store.commit("SET_CURRENT_MOVIE", this.movie);
-      this.$router.push({ name: "detail", params: { item: this.movie } });
+      this.$store.commit("SET_MOVIE", this.item);
+      this.$router.push(`/detail/${this.item.title}`);
     },
   },
 };
