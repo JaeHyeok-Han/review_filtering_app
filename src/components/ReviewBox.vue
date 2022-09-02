@@ -1,9 +1,17 @@
 <template>
-  <div class="reviewContainer"></div>
+  <div class="reviewContainer">
+    {{ review }}
+  </div>
 </template>
 
 <script>
-export default {};
+export default {
+  computed: {
+    review() {
+      return this.$store.getters.GET_REVIEW;
+    },
+  },
+};
 </script>
 
 <style>

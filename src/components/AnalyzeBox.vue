@@ -1,9 +1,17 @@
 <template>
-  <div class="analyzeContainer"></div>
+  <div class="analyzeContainer">
+    {{ emotion }}
+  </div>
 </template>
 
 <script>
-export default {};
+export default {
+  computed: {
+    emotion() {
+      return this.$store.getters.GET_EMOTION;
+    },
+  },
+};
 </script>
 
 <style>

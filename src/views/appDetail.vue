@@ -37,18 +37,12 @@ export default {
       this.review = false;
     },
   },
-  // created() {
-  //   this.$store.dispatch(
-  //     "FETCH_REVIEW",
-  //     JSON.stringify({
-  //       id: this.$store.getters.GET_CURRENT_MOVIE.DOCID,
-  //       title: this.$store.getters.GET_CURRENT_MOVIE.title.replace(
-  //         /(\s*)/g,
-  //         ""
-  //       ),
-  //     })
-  //   );
-  // },
+  created() {
+    this.$store.dispatch(
+      "FETCH_FILTERING_DATA",
+      this.$store.getters.GET_MOVIE.movieId
+    );
+  },
 };
 </script>
 

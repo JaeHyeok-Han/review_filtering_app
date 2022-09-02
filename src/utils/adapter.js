@@ -1,5 +1,6 @@
 export function kmdbMovieAdapter(movieInfo) {
   return {
+    movidId: movieInfo.DOCID,
     title: movieInfo.title.replace(/( !HS )/g, "").replace(/( !HE )/g, "").trim(),
     prodYear: movieInfo.prodYear,
     director: movieInfo.directors.director.map(ele => ele.directorNm).join(", "),
