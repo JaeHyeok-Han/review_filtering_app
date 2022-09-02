@@ -1,6 +1,6 @@
 <template>
-  <div class="rankingContainer">
-    <div class="rankingItem">{{ item }}</div>
+  <div class="rankingItem">
+    {{ item }}
   </div>
 </template>
 
