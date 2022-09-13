@@ -22,17 +22,19 @@ export default {
       state.movie = data;
     },
     SET_REVIEW(state, data) {
+      console.log(data);
       state.review = data;
     },
     SET_EMOTION(state, data) {
+      console.log(data);
       state.emotion = data;
     },
   },
   actions: {
-    async FETCH_FILTERING_DATA({ commit }, movieId) {
-      const response = await getFilteringData(movieId);
-      commit("SET_REVIEW", response.reviewData);
-      commit("SET_EMOTION", response.emotionData);
+    async FETCH_FILTERING_DATA(context) {
+      const response = await getFilteringData(context.getters.GET_MOVIE.movieId, context.getters.GET_MOVIE.title);
+      context.commit("SET_REVIEW", response.reviewData);
+      context.commit("SET_EMOTION", response.emotionData);
     }
   }
 }

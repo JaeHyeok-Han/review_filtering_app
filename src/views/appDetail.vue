@@ -37,12 +37,6 @@ export default {
       this.review = false;
     },
   },
-  created() {
-    this.$store.dispatch(
-      "FETCH_FILTERING_DATA",
-      this.$store.getters.GET_MOVIE.movieId
-    );
-  },
 };
 </script>
 

@@ -1,4 +1,6 @@
-export async function getFilteringData(movieId) {
-  const response = await fetch(`http://203.230.103.35:3000/data/${movieId}`);
-  return await response.json();
+export async function getFilteringData(movieId, movieTitle) {
+  const response = await fetch(`http://203.230.103.35:3000/capstone/review?id=${movieId}&title=${movieTitle}`);
+  const json = await response.json();
+  console.log(json);
+  return json;
 }
