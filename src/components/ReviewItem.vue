@@ -1,13 +1,13 @@
 <template>
   <div class="reviewItem">
-    {{ this.sentence }}
+    {{ this.item }}
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    sentence: String,
+    item: Object,
   },
 };
 </script>

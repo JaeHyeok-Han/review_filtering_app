@@ -31,10 +31,10 @@ export default {
   },
   methods: {
     viewReview() {
-      this.review = true;
+      this.isReview = true;
     },
     viewAnalyze() {
-      this.review = false;
+      this.isReview = false;
     },
   },
 };

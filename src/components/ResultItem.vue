@@ -12,6 +12,7 @@ export default {
   methods: {
     selectMovie() {
       this.$store.commit("SET_MOVIE", this.item);
+      this.$store.dispatch("FETCH_FILTERING_DATA");
       this.$router.push(`/detail/${this.item.title}`);
     },
   },
