@@ -1,5 +1,5 @@
 <template>
-  <div class="searchContainer">
+  <div class="searchBoxContainer">
     <div class="searchBox">
       <input type="text" v-model="searchKeyword" class="searchInput" />
       <button type="button" v-on:click="search">
@@ -39,5 +39,49 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+.searchBoxContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100% * 0.07);
+}
+.searchBox {
+  width: 40%;
+  height: 60%;
+  border: 1px solid #282828;
+}
+.searchBox input {
+  width: 90%;
+  height: 100%;
+  padding: 0 10px;
+  border: none;
+  font: normal 500 16px/ 22px "Pretendard-Regular";
+  text-align: center;
+}
+.searchBox input:focus {
+  outline: none;
+}
+.searchBox button {
+  width: 10%;
+  height: 100%;
+  border: none;
+  color: #282828;
+  font-size: 16px;
+  background: none;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .searchBox {
+    width: 85%;
+  }
+}
 </style>

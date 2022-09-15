@@ -1,5 +1,5 @@
 <template>
-  <div calss="mainContainer">
+  <div class="mainContainer">
     <app-header />
     <search-box />
     <ranking-box />
@@ -20,5 +20,11 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.mainContainer {
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  background: url("../images/background.png") no-repeat center center / 100%;
+}
 </style>

@@ -19,5 +19,9 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.analyzeContainer {
+  width: 100%;
+  padding: 20px 0;
+}
 </style>

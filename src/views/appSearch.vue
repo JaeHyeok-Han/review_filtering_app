@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="searchContainer">
     <app-header />
     <search-box />
     <p>
@@ -24,5 +24,16 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.searchContainer {
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  background: url("../images/background.png") no-repeat center center / 100%;
+  background-attachment: fixed;
+}
+.searchContainer p {
+  padding: 20px 0;
+  text-align: center;
+}
 </style>

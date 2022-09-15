@@ -1,5 +1,5 @@
 export function makeDateString() {
-  const date = new Date(Date.now() - 86400000);
+  const date = new Date(Date.now() - 86400000 * 2);
   const H = date.getFullYear();
   const M = date.getMonth() + 1;
   const D = date.getDate();

@@ -1,6 +1,11 @@
 <template>
   <div class="reviewContainer">
-    <review-item v-for="(item, index) in review" :key="index" :item="item" />
+    <review-item
+      v-for="(item, index) in review"
+      :key="index"
+      :item="item"
+      :index="index"
+    />
   </div>
 </template>
 
@@ -19,5 +24,9 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.reviewContainer {
+  width: 100%;
+  padding: 20px;
+}
 </style>
